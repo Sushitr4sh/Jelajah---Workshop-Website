@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') -%>
+<div class="mb-16">
+  <div class="mt-12 flex items-center gap-x-2 px-32 text-xl font-medium">
+    <a href="/" class="hover:underline">Jelajah</a>
+    <img src="/images/right-arrow.png" alt="" class="w-4" />
+    <a href="/account" class="hover:underline">Account</a>
+  </div>
+
+  <p class="mt-8 px-32 text-5xl font-semibold">Account</p>
+
+  <div class="mt-16 flex justify-between gap-x-4 px-32">
+    <a
+      href="/account/<%= currentUser._id %>/personal-info"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/PersonalInfo-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">Personal Info</p>
+    </a>
+    <a
+      href="/account/points"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/Points-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">Points</p>
+    </a>
+    <a
+      href="/account/reservation"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/Reservation-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">Reservation</p>
+    </a>
+  </div>
+
+  <div class="mt-12 flex justify-between gap-x-4 px-32">
+    <a
+      href="/account/wishlist"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/Wishlist-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">Wishlist</p>
+    </a>
+    <a
+      href="/account/history"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/History-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">History</p>
+    </a>
+    <a
+      href="/account/accomplished-skills"
+      class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
+    >
+      <img src="/images/AccomplishedSkills-account.png" alt="" srcset="" />
+      <p class="mt-4 text-3xl font-semibold">Accomplished Skills</p>
+    </a>
+  </div>
+</div>

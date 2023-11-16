@@ -1,0 +1,60 @@
+<% layout('layouts/other') -%>
+<main class="flex h-[100vh] w-full items-center justify-center bg-[#d9d9d9]">
+  <div
+    class="flex w-[50%] flex-col items-center justify-center rounded-lg bg-white px-12 py-8"
+  >
+    <p class="text-center text-4xl font-semibold">Sign up</p>
+    <form action="/signup" method="POST" class="mt-8 w-[90%] text-xl">
+      <div>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="mt-2 w-full rounded-lg border border border-slate-400 px-3 py-4 transition duration-150 ease-in focus:border-[#a14236] focus:outline-none"
+        />
+      </div>
+      <div class="mt-4">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="mt-2 w-full rounded-lg border border border-slate-400 px-3 py-4 transition duration-150 ease-in focus:border-[#a14236] focus:outline-none"
+        />
+      </div>
+      <div class="mt-4">
+        <label for="email">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="mt-2 w-full rounded-lg border border border-slate-400 px-3 py-4 transition duration-150 ease-in focus:border-[#a14236] focus:outline-none"
+        />
+      </div>
+      <div class="mt-4 flex gap-x-2">
+        <input
+          type="checkbox"
+          name="rememberMe"
+          id="rememberMe"
+          class="w-4"
+          style="accent-color: #a14236"
+        />
+        <p>Remember me?</p>
+      </div>
+      <p class="mt-4 text-center font-semibold">
+        Already a member?
+        <a
+          href="/login"
+          class="underline transition duration-150 ease-in hover:text-[#a14236]"
+          >LOG IN</a
+        >
+      </p>
+      <button
+        class="mt-4 w-full rounded-2xl bg-[#a14236] py-3 text-center text-2xl text-white transition duration-150 ease-in hover:bg-[#972D20]"
+      >
+        SIGN UP
+      </button>
+    </form>
+  </div>
+</main>

@@ -1,0 +1,110 @@
+<nav class="flex items-center justify-between px-32 py-12 shadow-xl">
+  <a href="/" class="text-5xl font-bold text-[#902B1E]">JELAJAH</a>
+  <div class="flex items-center gap-x-8 text-xl">
+    <% if(currentUser){ %>
+    <div class="flex items-center gap-x-4">
+      <img src="/images/profile.png" class="w-12" />
+      <div>
+        <p class="text-2xl font-bold">Name</p>
+        <a href="/chats" class="text-base font-medium text-[#a14236]"
+          ><%= currentUser.username %></a
+        >
+      </div>
+    </div>
+    <% } else {%>
+    <a
+      href="/login"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      >Log in</a
+    >
+    <% } %> <% if(currentUser){ %>
+    <button
+      href="/account"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      id="dropdownDefaultButton"
+      data-dropdown-toggle="dropdown"
+    >
+      Account
+    </button>
+    <% } else { %>
+    <a
+      href="/login"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      id="dropdownDefaultButton"
+      data-dropdown-toggle="dropdown"
+    >
+      Account
+    </a>
+    <% } %>
+    <a
+      href="/workshops"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      >Workshops</a
+    >
+    <a
+      href="/cart"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      >cart</a
+    >
+  </div>
+</nav>
+
+<!-- Dropdown menu -->
+<% if(currentUser){ %>
+<div
+  id="dropdown"
+  class="z-10 hidden w-96 divide-y divide-gray-100 rounded-lg bg-white p-6"
+>
+  <ul class="text-xl text-gray-700" aria-labelledby="dropdownDefaultButton">
+    <li>
+      <a
+        href="/account/<%= currentUser._id %>"
+        class="mb-8 flex items-center gap-x-6 rounded-lg px-4 py-2 hover:bg-gray-100"
+      >
+        <img src="images/Profile-nav.png" alt="" srcset="" />
+        <p>Manage Account</p>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="mb-8 flex items-center gap-x-6 rounded-lg px-4 py-2 hover:bg-gray-100"
+      >
+        <img src="images/Reservation-nav.png" alt="" srcset="" />
+        <p>Reservation</p>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="mb-8 flex items-center gap-x-6 rounded-lg px-4 py-2 hover:bg-gray-100"
+      >
+        <img src="images/History-nav.png" alt="" srcset="" />
+        <p>History</p>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+        class="mb-8 flex items-center gap-x-6 rounded-lg px-4 py-2 hover:bg-gray-100"
+      >
+        <img src="images/Wishlist-nav.png" alt="" srcset="" />
+        <p>Wishlist</p>
+      </a>
+    </li>
+
+    <% if(currentUser){ %>
+    <li>
+      <form action="/logout" method="POST">
+        <button
+          class="mt-8 flex w-full items-center gap-x-6 rounded-lg px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="images/Logout-nav.png" alt="" />
+          <p>Logout</p>
+        </button>
+      </form>
+    </li>
+    <% } %>
+  </ul>
+</div>
+<% } %>

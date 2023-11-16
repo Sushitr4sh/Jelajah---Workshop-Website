@@ -1,0 +1,245 @@
+<% layout('layouts/boilerplate') -%>
+<section class="relative flex h-[80vh] items-center">
+  <img
+    src="/images/main.jpg"
+    class="h-[80vh] w-full object-cover brightness-[.5]"
+  />
+  <div class="absolute w-full text-center text-white">
+    <p class="text-6xl">Experience Indonesia for a Cause</p>
+    <div class="flex justify-center">
+      <p class="mt-12 w-[50%] text-xl">
+        Here in Jelajah, we offer you a selection of crafting and cooking
+        courses all across Indonesia. All our workshop classes are native to the
+        region you will be travelling to and learn at. Our aim is that you get
+        to explore Indonesia’s beauty while getting a hends on experience on the
+        culture.
+        <br />
+        <br />
+        Through this workshop you not only support locals but also charities as
+        a percentage of your purchase directly goes to selected charities in
+        Indonesia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-[60vh] overflow-hidden">
+    <!-- Item 1 -->
+    <div
+      class="flex items-center justify-center duration-700 ease-in-out"
+      data-carousel-item
+    >
+      <img
+        src="images/Carousel 1.png"
+        class="h-full w-full object-cover"
+        alt="..."
+      />
+      <span class="absolute text-center text-5xl text-white"
+        >Explore destinations in Indonesia</span
+      >
+    </div>
+    <!-- Item 2 -->
+    <div
+      class="flex items-center justify-center duration-700 ease-in-out"
+      data-carousel-item
+    >
+      <img
+        src="images/Carousel 2.png"
+        class="h-full w-full object-cover"
+        alt="..."
+      />
+      <span class="absolute text-center text-5xl text-white"
+        >Explore destinations in Indonesia</span
+      >
+    </div>
+    <!-- Item 3 -->
+    <div
+      class="flex items-center justify-center duration-700 ease-in-out"
+      data-carousel-item
+    >
+      <img
+        src="images/Carousel 3.png"
+        class="h-full w-full object-cover"
+        alt="..."
+      />
+      <span class="absolute text-center text-5xl text-white"
+        >Explore destinations in Indonesia</span
+      >
+    </div>
+  </div>
+</div>
+
+<section class="relative flex h-[60vh] items-center text-white">
+  <img src="images/travel.png" class="h-full w-full object-cover" />
+  <div class="absolute flex w-full flex-col items-center justify-center">
+    <p class="text-5xl">Where are you traveling to?</p>
+    <div class="mt-16 flex w-[60%] items-center gap-x-2">
+      <img src="images/Location.png" class="w-6" />
+      <p id="location">Your Current Location</p>
+    </div>
+    <div
+      class="mx-auto mt-4 flex w-[60%] items-center justify-between overflow-hidden rounded-2xl bg-white py-6"
+    >
+      <input
+        type="text"
+        class="w-full px-8 text-black outline-none"
+        placeholder="Search for Destinations..."
+      />
+      <img src="images/Search.png" class="mr-8 w-6 cursor-pointer" />
+    </div>
+  </div>
+</section>
+
+<section class="h-[100vh] px-32 shadow-md">
+  <h1 class="my-28 text-center text-5xl font-medium">Workshops</h1>
+  <div class="flex justify-between gap-x-8 text-lg">
+    <div class="overflow-hidden rounded-lg bg-[#697b51]">
+      <img src="/images/Workshop 1.png" />
+      <div class="px-3 py-2 text-white">
+        <p class="font-semibold">Pottery Workshop</p>
+        <p>Pick your date</p>
+        <div class="mt-4 flex justify-between">
+          <p>Rp 300,000</p>
+          <p>Ubud, Bali</p>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-lg bg-[#697b51]">
+      <img src="/images/Workshop 2.png" />
+      <div class="px-3 py-2 text-white">
+        <p class="font-semibold">Pottery Workshop</p>
+        <p>01 May 2023</p>
+        <div class="mt-4 flex justify-between">
+          <p>Rp 300,000</p>
+          <p>Ubud, Bali</p>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-lg bg-[#697b51]">
+      <img src="/images/Workshop 3.png" />
+      <div class="px-3 py-2 text-white">
+        <p class="font-semibold">Pottery Workshop</p>
+        <p>02 May 2023</p>
+        <div class="mt-4 flex justify-between">
+          <p>Rp 300,000</p>
+          <p>Ubud, Bali</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-28 flex w-full items-center justify-center">
+    <a
+      href="/workshops"
+      class="rounded-lg border border-[#697b51] px-12 py-2 text-xl font-semibold text-[#697b51] shadow-lg transition duration-150 ease-in hover:bg-[#697b51] hover:text-white"
+    >
+      Explore more
+    </a>
+  </div>
+</section>
+
+<section class="h-[100vh] px-32 shadow-md">
+  <h1 class="my-28 text-center text-5xl font-medium">Why Us</h1>
+  <div class="flex justify-between gap-x-8 text-lg">
+    <div class="w-full overflow-hidden rounded-lg bg-[#d9d9d9]">
+      <img src="/images/Why-us 1.png" class="w-full object-cover" />
+      <div class="px-3 py-2 text-black">
+        <p class="text-center font-bold">Pride in Tradition</p>
+        <div class="mb-2 mt-4 flex justify-center">
+          <p class="w-[80%] text-center text-sm">
+            We offer the most authentic workshops from your destination of
+            choice across Indonesia
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full overflow-hidden rounded-lg bg-[#d9d9d9]">
+      <img src="/images/Why-us 2.png" class="w-full object-cover" />
+      <div class="px-3 py-2 text-black">
+        <p class="text-center font-bold">For a Cause</p>
+        <div class="mb-2 mt-4 flex justify-center">
+          <p class="w-[80%] text-center text-sm">
+            Kids across Indonesia are experiencing the benefit from you workshop
+            class purchase
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full overflow-hidden rounded-lg bg-[#d9d9d9]">
+      <img src="/images/Why-us 3.png" class="w-full object-cover" />
+      <div class="px-3 py-2 text-black">
+        <p class="text-center font-bold">Back to Nature</p>
+        <div class="mb-2 mt-4 flex justify-center">
+          <p class="w-[80%] text-center text-sm">
+            Our workshops are done in places that are close to nature and we try
+            to make our workshops as sustainable as possible
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="h-[100vh] w-full shadow-md">
+  <div class="text-center">
+    <p class="mt-28 text-5xl font-semibold">Our Commitment</p>
+    <p class="my-8 text-3xl font-medium text-[#697b51]">
+      Experience Indonesia for a Cause
+    </p>
+    <div class="flex justify-center">
+      <p class="w-[45%] text-sm">
+        JELAJAH is not only committed to give you an experience travelling in
+        Indonesia like no other, but is also committed to be impactful for
+        locals all across Indonesia through our programs that are directly
+        intergrated with your workshop purchases
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-28 flex justify-center gap-x-16">
+    <div class="flex w-[17%] flex-col items-center gap-y-8">
+      <img src="images/home.png" class="w-24" />
+      <p class="text-center text-sm">
+        Our workshops are done in local areas including local workshops where
+        locals live and carry out their day-to-day life
+      </p>
+    </div>
+    <div class="flex w-[17%] flex-col items-center gap-y-8">
+      <img src="images/clipboard.png" class="w-24" />
+      <p class="text-center text-sm">
+        Our workshops are done in local areas including local workshops where
+        locals live and carry out their day-to-day life
+      </p>
+    </div>
+    <div class="flex w-[17%] flex-col items-center gap-y-8">
+      <img src="images/database.png" class="w-24" />
+      <p class="text-center text-sm">
+        Our workshops are done in local areas including local workshops where
+        locals live and carry out their day-to-day life
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer
+  class="flex flex-col items-center justify-center gap-y-8 bg-[#f1f1f1] py-8 text-3xl font-medium text-[#383b28]"
+>
+  <a href="/faq" class="hover:underline">FAQ</a>
+  <a href="/contactus" class="hover:underline">Contact Us</a>
+  <div class="flex items-center justify-center gap-x-4">
+    <a href="/"
+      ><img src="images/Facebook.png" alt="" srcset="" class="w-6"
+    /></a>
+    <a href="/"
+      ><img src="images/Instagram.png" alt="" srcset="" class="w-6"
+    /></a>
+    <a href="/"
+      ><img src="images/Twitter.png" alt="" srcset="" class="w-6"
+    /></a>
+    <a href="/"
+      ><img src="images/Whatsapp.png" alt="" srcset="" class="w-6"
+    /></a>
+    <a href="/"><img src="images/Email.png" alt="" srcset="" class="w-6" /></a>
+  </div>
+</footer>
