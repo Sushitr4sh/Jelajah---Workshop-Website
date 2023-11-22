@@ -215,6 +215,18 @@ app.get("/workshops", (req, res) => {
   res.render("workshops/workshop");
 });
 
+app.get("/workshops/:id", (req, res) => {
+  res.render("workshops/workshop-detail");
+});
+
+app.get("/:id/cart", (req, res) => {
+  res.render("users/cart");
+});
+
+app.get("/payment", (req, res) => {
+  res.render("workshops/payment");
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

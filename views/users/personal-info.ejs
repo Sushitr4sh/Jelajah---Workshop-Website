@@ -46,15 +46,7 @@
             placeholder="Gender"
             class="mt-2 w-full focus:outline-none"
             value="<%= currentUser.gender %>"
-            disabled
           />
-          <button
-            class="border-b border-[#828282] font-thin text-[#828282]"
-            type="button"
-            onclick="enableInput('gender')"
-          >
-            Add
-          </button>
         </div>
       </div>
       <div class="mb-4 border-b border-[#828282] pb-4">
@@ -68,12 +60,6 @@
             class="mt-2 w-full focus:outline-none"
             value="<%= currentUser.birthDate %>"
           />
-          <button
-            class="border-b border-[#828282] font-thin text-[#828282]"
-            type="button"
-          >
-            Add
-          </button>
           <style>
             input[type="date"]::-webkit-calendar-picker-indicator {
               display: none;
@@ -92,12 +78,6 @@
             class="mt-2 w-full focus:outline-none"
             value="<%= currentUser.email %>"
           />
-          <button
-            class="border-b border-[#828282] font-thin text-[#828282]"
-            type="button"
-          >
-            Edit
-          </button>
         </div>
       </div>
       <div class="mb-4 border-b border-[#828282] pb-4">
@@ -111,12 +91,6 @@
             class="mt-2 w-full focus:outline-none"
             value="<%= currentUser.phoneNumber %>"
           />
-          <button
-            class="border-b border-[#828282] font-thin text-[#828282]"
-            type="button"
-          >
-            Add
-          </button>
         </div>
       </div>
       <div class="mb-4 border-b border-[#828282] pb-4">
@@ -130,12 +104,6 @@
             class="mt-2 w-full focus:outline-none"
             value="<%= currentUser.address %>"
           />
-          <button
-            class="border-b border-[#828282] font-thin text-[#828282]"
-            type="button"
-          >
-            Add
-          </button>
         </div>
       </div>
       <button
@@ -152,11 +120,3 @@
     </div>
   </main>
 </div>
-
-<script>
-  function enableInput(inputId) {
-    var input = document.getElementById(inputId);
-    input.removeAttribute("disabled");
-    input.focus();
-  }
-</script>

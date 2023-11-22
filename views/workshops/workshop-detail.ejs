@@ -1,0 +1,288 @@
+<% layout('layouts/boilerplate') -%>
+<main class="flex gap-x-16 px-32 pb-16 pt-16 text-lg">
+  <div class="w-[70%]">
+    <h1 class="text-5xl font-medium text-[#697b51]">Pottery Workshop</h1>
+    <div class="mt-4">
+      <div class="mb-4 flex items-center gap-x-2">
+        <img
+          src="/images/star-workshop-detail.png"
+          alt=""
+          srcset=""
+          class="w-5"
+        />
+        <p>4.7 <span class="text-[#828282]">(20 rating)</span></p>
+      </div>
+      <div class="flex items-center gap-x-2">
+        <img
+          src="/images/wishlist-workshop-detail.png"
+          alt=""
+          srcset=""
+          class="w-5"
+        />
+        <p>Add to wishlist</p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-[#828282]">
+      <div class="flex items-center gap-x-2">
+        <img
+          src="/images/location-workshop-detail.png"
+          alt=""
+          srcset=""
+          class="w-5"
+        />
+        <p>
+          Jl. Gunungsari, Br. Ambengan, Peliatan, Ubud, 80571
+          <a href="/" class="font-semibold text-black">See Map</a>
+        </p>
+      </div>
+      <div class="mt-4 flex items-center gap-x-2">
+        <img
+          src="/images/clock-workshop-detail.png"
+          alt=""
+          srcset=""
+          class="w-5"
+        />
+        <p>Duration 2 hours</p>
+      </div>
+      <div class="mt-4 flex items-center gap-x-2">
+        <img
+          src="/images/language-workshop-detail.png"
+          alt=""
+          srcset=""
+          class="w-5"
+        />
+        <p>English or Indonesian</p>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <p class="text-3xl font-semibold">What you will learn</p>
+      <p class="mt-4">
+        You will learn all the basics of potter making both hand-building
+        techniques and wheel throwing techniques. Our instructor will also show
+        you how to decorate your pieces with traditional motifs from Bali.
+      </p>
+    </div>
+
+    <div class="mt-8">
+      <p class="text-3xl font-semibold">What will you get</p>
+      <ul class="mt-4 list-inside list-disc">
+        <li>-Clay (1kg)</li>
+        <li>-Tools & equipments</li>
+        <li>-Supplies</li>
+        <li>-Firing services</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <div id="default-carousel" class="relative" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-[172px] overflow-hidden">
+          <!-- Item 1 -->
+          <div
+            class="flex justify-between gap-x-[50px] duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <img src="/images/Details 1.png" alt="" srcset="" />
+            <img src="/images/Details 2.png" alt="" srcset="" />
+            <img src="/images/Details 3.png" alt="" srcset="" />
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="flex justify-between gap-x-[50px] duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <img src="/images/Details 1.png" alt="" srcset="" />
+            <img src="/images/Details 2.png" alt="" srcset="" />
+            <img src="/images/Details 3.png" alt="" srcset="" />
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="flex justify-between gap-x-[50px] duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <img src="/images/Details 1.png" alt="" srcset="" />
+            <img src="/images/Details 2.png" alt="" srcset="" />
+            <img src="/images/Details 3.png" alt="" srcset="" />
+          </div>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="group absolute left-0 top-0 z-30 flex h-full items-center justify-center focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="bg-grey2 -ml-[30px] inline-flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full opacity-70 transition duration-150 ease-in hover:bg-gray-600"
+          >
+            <svg
+              class="h-[40px] w-[40px] text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+            <span class="hidden">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="group absolute right-0 top-0 z-30 -mr-[30px] flex h-full items-center justify-center focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="bg-grey2 inline-flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full opacity-70 transition duration-150 ease-in hover:bg-gray-600"
+          >
+            <svg
+              class="h-[40px] w-[40px] text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+            <span class="hidden">Next</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex w-[30%] flex-col items-end self-center">
+    <div class="flex flex-col items-end">
+      <p>Price starts from</p>
+      <p class="text-3xl font-bold text-[#697b51]">Rp 300.000</p>
+    </div>
+    <form class="mt-8 w-[80%] rounded-xl bg-[#d9d9d9] p-4">
+      <p class="my-8 text-center text-3xl font-bold">Reserve</p>
+      <div>
+        <label for="guests">Number of guests</label>
+        <div
+          class="mt-2 w-full overflow-hidden rounded-md border border-[#9b9d93]"
+        >
+          <input type="number" class="w-full px-2 py-1 focus:outline-none" />
+        </div>
+      </div>
+      <div class="mt-4">
+        <label for="guests">Datte</label>
+        <div
+          class="mt-2 w-full overflow-hidden rounded-md border border-[#9b9d93]"
+        >
+          <input type="date" class="w-full px-2 py-1 focus:outline-none" />
+        </div>
+      </div>
+      <div class="mt-4">
+        <label for="guests">Time</label>
+        <div
+          class="mt-2 w-full overflow-hidden rounded-md border border-[#9b9d93]"
+        >
+          <input type="time" class="w-full px-2 py-1 focus:outline-none" />
+        </div>
+      </div>
+      <div class="my-8 flex justify-center">
+        <div
+          class="w-80% popup cursor-pointer rounded-lg bg-[#697b51] px-8 py-2 font-semibold text-white transition duration-150 ease-in hover:bg-[#64764c]"
+          onclick="togglePopUp()"
+        >
+          Reserve now
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!-- Slide Over 1 -->
+<div
+  id="slideover-container"
+  class="invisible fixed inset-0 z-50 h-full w-full"
+>
+  <div
+    id="slideover-bg"
+    class="absolute inset-0 h-full w-full bg-gray-900 opacity-0 transition-all duration-500 ease-out"
+  ></div>
+  <div
+    id="slideover"
+    class="absolute bottom-0 left-0 right-0 top-0 m-auto h-[50vh] w-[40%] translate-x-full rounded-xl bg-white p-8"
+  >
+    <div class="flex items-center justify-between">
+      <p class="text-3xl font-bold">Reservation request</p>
+      <img
+        src="/images/close-button.png"
+        class="cursor-pointer"
+        onclick="togglePopUp()"
+      />
+    </div>
+    <p class="mt-8 text-xl">Pottery Workshop at Ubud, Bali</p>
+    <div class="mt-4 flex items-center gap-x-8 text-xl text-[#4d4d4d]">
+      <img src="/images/pottery-workshop-review.png" alt="" srcset="" />
+      <div class="grid w-full grid-cols-2">
+        <div>
+          <p class="font-medium">Date</p>
+          <p>23 Sep 2023</p>
+        </div>
+        <div>
+          <p class="font-medium">Time</p>
+          <p>12:00 WITA</p>
+        </div>
+        <div class="col-span-2 mt-4">
+          <p class="font-medium">Guests</p>
+          <p>3 guests</p>
+        </div>
+        <a
+          class="popup col-span-2 mt-4 grow cursor-pointer rounded-lg bg-[#697b51] px-8 py-2 text-center text-xl font-semibold text-white transition duration-150 ease-in hover:bg-[#64764c]"
+          href="/<%= currentnUser._id %>/cart"
+        >
+          Add to Cart
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePopUp() {
+    document
+      .getElementById("slideover-container")
+      .classList.toggle("invisible");
+    document.getElementById("slideover-bg").classList.toggle("opacity-0");
+    document.getElementById("slideover-bg").classList.toggle("opacity-50");
+    document.getElementById("slideover").classList.toggle("translate-x-full");
+  }
+
+  function toggleSlideover2() {
+    document
+      .getElementById("slideover-container2")
+      .classList.toggle("invisible");
+    document.getElementById("slideover-bg2").classList.toggle("opacity-0");
+    document.getElementById("slideover-bg2").classList.toggle("opacity-50");
+    document.getElementById("slideover2").classList.toggle("translate-y-full");
+  }
+
+  let isClicked = false;
+  const dropdownButton = document.querySelector("#dropdownDefault");
+  const dropdown = document.querySelector("#dropdown");
+  const body = document.querySelector("body");
+  dropdownButton.addEventListener("click", function () {
+    if (!isClicked) {
+      dropdown.classList.remove("hidden");
+      isClicked = true;
+    } else {
+      dropdown.classList.add("hidden");
+      isClicked = false;
+    }
+  });
+</script>
