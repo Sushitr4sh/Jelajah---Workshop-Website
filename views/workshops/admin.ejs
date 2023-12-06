@@ -1,0 +1,174 @@
+<% layout('layouts/boilerplate') -%>
+<form
+  action="/workshops"
+  method="POST"
+  class="flex flex-col items-center justify-center py-8"
+  enctype="multipart/form-data"
+  novalidate
+>
+  <h1 class="mb-4 text-5xl font-bold">Add Workshop</h1>
+  <div class="w-[50%]">
+    <div>
+      <label for="title" class="block capitalize">title:</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+      />
+    </div>
+    <div>
+      <label for="category" class="block capitalize">category:</label>
+      <input
+        type="text"
+        name="category"
+        id="category"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+      />
+    </div>
+    <div>
+      <label for="location" class="block capitalize">location</label>
+      <input
+        type="text"
+        name="location"
+        id="location"
+        required
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+      />
+    </div>
+    <div>
+      <label for="locationDetail" class="block capitalize"
+        >location detail</label
+      >
+      <input
+        type="text"
+        name="locationDetail"
+        id="locationDetail"
+        required
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+      />
+    </div>
+    <div>
+      <label for="description" class="block capitalize">description</label>
+      <input
+        type="text"
+        name="description"
+        id="description"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+      />
+    </div>
+    <div>
+      <label for="description" class="block capitalize">price</label>
+      <input
+        type="number"
+        name="price"
+        id="price"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+      />
+    </div>
+    <div>
+      <label for="duration" class="block capitalize">duration</label>
+      <input
+        type="number"
+        name="duration"
+        id="duration"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+      />
+    </div>
+    <div>
+      <label for="rating" class="block capitalize">rating:</label>
+      <input
+        type="number"
+        name="rating"
+        id="rating"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+        value="0"
+      />
+    </div>
+    <div>
+      <label for="totalRating" class="block capitalize">total rating</label>
+      <input
+        type="number"
+        name="totalRating"
+        id="totalRating"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-lg"
+        required
+        value="0"
+      />
+    </div>
+    <div class="mt-4 flex w-full items-center justify-center">
+      <label
+        for="image"
+        class="flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 transition duration-150 ease-in hover:bg-gray-200"
+      >
+        <div class="flex flex-col items-center justify-center pb-6 pt-5">
+          <svg
+            class="mb-4 h-8 w-8 text-gray-500"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 16"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+            />
+          </svg>
+          <p class="mb-2 text-sm text-gray-500">
+            <span class="font-semibold">Click to upload</span> or drag and drop
+          </p>
+          <p class="text-xs text-gray-500" id="image-name"></p>
+        </div>
+        <input id="image" name="image" type="file" class="hidden" multiple />
+      </label>
+    </div>
+    <div class="flex justify-end">
+      <button
+        class="mt-2 rounded-xl bg-[#902b1e] px-3 py-2 font-semibold text-white"
+      >
+        CREATE
+      </button>
+    </div>
+  </div>
+</form>
+
+<script>
+  var input = document.getElementById("image");
+  var infoArea = document.getElementById("image-name");
+
+  input.addEventListener("change", showFileNames);
+
+  function showFileNames(event) {
+    var input = event.srcElement;
+    var fileNames = [];
+
+    // Iterate through the files and collect their names
+    for (var i = 0; i < input.files.length; i++) {
+      fileNames.push(input.files[i].name);
+    }
+
+    // Create a document fragment to hold the file names and <br> elements
+    var fragment = document.createDocumentFragment();
+
+    // Iterate through the file names and add them to the fragment with <br> elements
+    for (var j = 0; j < fileNames.length; j++) {
+      fragment.appendChild(document.createTextNode(fileNames[j]));
+      fragment.appendChild(document.createElement("br"));
+    }
+
+    // Clear the previous content of the infoArea
+    infoArea.innerHTML = "";
+
+    // Append the fragment with file names and <br> elements to the infoArea
+    infoArea.appendChild(fragment);
+  }
+</script>

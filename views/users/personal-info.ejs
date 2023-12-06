@@ -1,5 +1,5 @@
 <% layout('layouts/boilerplate') -%>
-<div class="mb-16">
+<div class="mb-16 pt-2">
   <div class="mt-12 flex items-center gap-x-2 px-32 text-xl font-medium">
     <a href="/" class="hover:underline">Jelajah</a>
     <img src="/images/right-arrow.png" alt="" class="w-4" />
@@ -116,7 +116,9 @@
     <div class="flex w-[30%] flex-col items-center">
       <img src="/images/profile.png" alt="" srcset="" />
       <p class="mt-8 text-5xl font-bold"><%= currentUser.username %></p>
-      <p class="mt-4 text-3xl font-semibold text-[#972d20]">Penjelah Level 1</p>
+      <p class="mt-4 text-3xl font-semibold text-[#972d20]">
+        Penjelah Level <%= currentUser.level %>
+      </p>
     </div>
   </main>
 </div>

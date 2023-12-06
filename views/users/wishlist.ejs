@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') -%>
+<div class="mb-16 pt-2">
+  <div class="mt-12 flex items-center gap-x-2 px-32 text-xl font-medium">
+    <a href="/" class="hover:underline">Jelajah</a>
+    <img src="/images/right-arrow.png" alt="" class="w-4" />
+    <a href="/account/<%= currentUser._id %>" class="hover:underline"
+      >Account</a
+    >
+    <img src="/images/right-arrow.png" alt="" class="w-4" />
+    <a href="/account/<%= currentUser._id %>/wishlist" class="hover:underline"
+      >Wishlist</a
+    >
+  </div>
+
+  <p class="mt-8 px-32 text-5xl font-semibold">Wishlist</p>
+
+  <main class="mt-12 px-32 text-xl">
+    <p class="font-medium">
+      Hi <span class="capitalize"><%= currentUser.username %></span>, you saved
+      <%= currentUser.wishlist.length %> workshops from jelajah
+    </p>
+
+    <div class="mt-12 w-full text-lg">
+      <% for(let wishlist of user.wishlist) { %>
+      <div
+        class="mt-8 flex w-full justify-between rounded-xl border border-slate-300 p-4 shadow-md"
+      >
+        <div class="flex w-[70%] gap-x-4">
+          <input type="checkbox" name="" id="" class="w-8" />
+          <img
+            src="<%= wishlist.images[0].url %>"
+            class="aspect-square w-36 rounded-lg object-cover"
+          />
+          <div class="flex flex-col justify-between">
+            <div>
+              <p class="text-3xl font-bold"><%= wishlist.title %></p>
+              <p class="text-[#8a8c8f]"><%= wishlist.location %></p>
+            </div>
+            <p class="mt-2 text-[#8a8c8f]">
+              You have made a reservation for this workshop for 3 guests on
+              September 23 2023, at 12.00 WITA.
+            </p>
+          </div>
+        </div>
+        <div class="flex w-[30%] flex-col justify-between">
+          <form
+            action="/user/<%= currentUser._id %>/wishlist/<%= wishlist._id %>?_method=DELETE"
+            method="POST"
+            class="self-end"
+          >
+            <button type="submit">
+              <img src="/images/close-button.png" alt="" />
+            </button>
+          </form>
+          <p class="self-end text-3xl font-semibold">
+            Rp <%= wishlist.price %>
+          </p>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </main>
+</div>

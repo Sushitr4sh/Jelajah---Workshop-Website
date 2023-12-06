@@ -1,23 +1,9 @@
-<nav class="flex items-center justify-between px-32 py-12 shadow-xl">
+<nav
+  class="fixed top-0 z-50 flex w-full items-center justify-between bg-white px-32 py-12 shadow-xl"
+>
   <a href="/" class="text-5xl font-bold text-[#902B1E]">JELAJAH</a>
   <div class="flex items-center gap-x-8 text-xl">
     <% if(currentUser){ %>
-    <div class="flex items-center gap-x-4">
-      <img src="/images/profile.png" class="w-12" />
-      <div>
-        <p class="text-2xl font-bold">Name</p>
-        <a href="/chats" class="text-base font-medium text-[#a14236]"
-          ><%= currentUser.username %></a
-        >
-      </div>
-    </div>
-    <% } else {%>
-    <a
-      href="/login"
-      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
-      >Log in</a
-    >
-    <% } %> <% if(currentUser){ %>
     <button
       href="/account"
       class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
@@ -42,10 +28,27 @@
       >Workshops</a
     >
     <a
-      href="/cart"
+      href="/<%= currentUser._id %>/cart"
       class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
       >cart</a
     >
+    <% if(currentUser){ %>
+    <div class="flex items-center gap-x-4">
+      <img src="/images/profile.png" class="w-12" />
+      <div>
+        <p class="text-2xl font-bold"><%= currentUser.username %></p>
+        <a href="/chats" class="text-base font-medium text-[#a14236]"
+          >Penjelajah <%= currentUser.level %></a
+        >
+      </div>
+    </div>
+    <% } else {%>
+    <a
+      href="/login"
+      class="px-3 py-2 text-2xl transition duration-150 ease-in hover:bg-gray-300"
+      >Log in</a
+    >
+    <% } %>
   </div>
 </nav>
 
@@ -53,7 +56,7 @@
 <% if(currentUser){ %>
 <div
   id="dropdown"
-  class="z-10 hidden w-96 divide-y divide-gray-100 rounded-lg bg-white p-6"
+  class="z-[60] hidden w-96 divide-y divide-gray-100 rounded-lg bg-white p-6"
 >
   <ul class="text-xl text-gray-700" aria-labelledby="dropdownDefaultButton">
     <li>

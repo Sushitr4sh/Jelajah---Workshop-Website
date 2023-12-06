@@ -3,26 +3,34 @@
   <h1 class="text-5xl font-bold text-white">SHOPPING CART</h1>
 </section>
 
+<% for(let cart of user.cart) { %>
 <section
-  class="mt-16 flex justify-between bg-[#697b51] px-32 py-28 text-lg text-white"
+  class="mt-4 flex justify-between bg-[#697b51] px-32 py-28 text-lg text-white"
 >
   <div class="flex gap-x-8">
-    <img src="/images/pottery-workshop-review.png" />
-    <div>
-      <p class="text-bold text-2xl font-semibold">Pottery Workshop</p>
-      <p class="mt-2">Serayu Pottery, Ubud.</p>
-      <div class="mt-2 flex items-center gap-x-4">
-        <button><img src="/images/minus-button.png" alt="" srcset="" /></button>
-        <p class="text-black">1</p>
-        <button><img src="/images/plus-button.png" alt="" srcset="" /></button>
+    <img
+      src="<%= cart.workshop.images[0].url %>"
+      class="aspect-square w-40 rounded-lg"
+    />
+    <div class="flex flex-col justify-between">
+      <div>
+        <p class="text-bold text-2xl font-semibold">
+          <%= cart.workshop.title %>
+        </p>
+        <p class="mt-2"><%= cart.workshop.location %></p>
       </div>
+      <p class="w-[70%] text-xl">
+        You have made a reservation for this workshop for <%= cart.guest %>
+        guests on <%= cart.date %>, at <%= cart.time %>
+      </p>
     </div>
   </div>
-  <div class="text-3xl">
+  <div class="flex flex-col justify-between text-3xl font-semibold">
     <p>Total:</p>
-    <p class="mt-2">Rp 300,000</p>
+    <p class="mt-2">Rp <%= cart.guest * cart.workshop.price %></p>
   </div>
 </section>
+<% } %>
 
 <section class="mt-16 flex justify-end px-32 text-xl">
   <div class="flex gap-x-4 font-semibold">

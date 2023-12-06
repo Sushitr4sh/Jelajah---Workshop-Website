@@ -1,5 +1,5 @@
 <% layout('layouts/boilerplate') -%>
-<div class="mb-16">
+<div class="mb-16 pt-2">
   <div class="mt-12 flex items-center gap-x-2 px-32 text-xl font-medium">
     <a href="/" class="hover:underline">Jelajah</a>
     <img src="/images/right-arrow.png" alt="" class="w-4" />
@@ -17,14 +17,14 @@
       <p class="mt-4 text-3xl font-semibold">Personal Info</p>
     </a>
     <a
-      href="/account/points"
+      href="/account/<%= currentUser._id %>/points"
       class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
     >
       <img src="/images/Points-account.png" alt="" srcset="" />
       <p class="mt-4 text-3xl font-semibold">Points</p>
     </a>
     <a
-      href="/account/reservation"
+      href="/account/<%= currentUser._id %>/reservation"
       class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
     >
       <img src="/images/Reservation-account.png" alt="" srcset="" />
@@ -34,21 +34,21 @@
 
   <div class="mt-12 flex justify-between gap-x-4 px-32">
     <a
-      href="/account/wishlist"
+      href="/account/<%= currentUser._id %>/wishlist"
       class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
     >
       <img src="/images/Wishlist-account.png" alt="" srcset="" />
       <p class="mt-4 text-3xl font-semibold">Wishlist</p>
     </a>
     <a
-      href="/account/history"
+      href="/account/<%= currentUser._id %>/history"
       class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
     >
       <img src="/images/History-account.png" alt="" srcset="" />
       <p class="mt-4 text-3xl font-semibold">History</p>
     </a>
     <a
-      href="/account/accomplished-skills"
+      href="/account/<%= currentUser._id %>/accomplished-skills"
       class="w-full rounded-lg border-2 border-[#697b51] p-8 transition duration-75 ease-in hover:bg-[#697b51]"
     >
       <img src="/images/AccomplishedSkills-account.png" alt="" srcset="" />

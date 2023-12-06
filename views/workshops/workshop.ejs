@@ -21,207 +21,53 @@
 
 <section class="px-32">
   <h1 class="my-16 text-center text-5xl font-medium">Crafting</h1>
-  <div class="flex justify-between gap-x-8 text-lg">
+  <div class="grid grid-cols-3 gap-8 text-lg">
+    <% for(let workshop of workshops){ %> <% if(workshop.category ===
+    "Crafting"){ %>
     <a
-      href="/workshops/123456789"
+      href="/workshops/<%= workshop._id %>"
       class="overflow-hidden rounded-lg bg-[#697b51]"
     >
-      <img src="/images/Workshop 1.png" />
+      <img
+        src="<%= workshop.images[0].url %>"
+        class="aspect-video w-full object-cover"
+      />
       <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Pottery Workshop</p>
+        <p class="font-semibold"><%= workshop.title %></p>
         <p>Pick your date</p>
         <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>Ubud, Bali</p>
+          <p><%= workshop.price %></p>
+          <p><%= workshop.location %></p>
         </div>
       </div>
     </a>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/Workshop 2.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Pottery Workshop</p>
-        <p>01 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>Ubud, Bali</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/Workshop 3.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Pottery Workshop</p>
-        <p>02 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>Ubud, Bali</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-8 flex justify-between gap-x-8 text-lg">
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/flower-bouquet-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Pottery Workshop</p>
-        <p>Pick your date</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 250,000</p>
-          <p>Sukabumi, Jakarta</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/batik-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Batik Workshop</p>
-        <p>03 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>Bantul, Yogyakarta</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/brass-jewelry-making-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Brass jewelry-making Workshop</p>
-        <p>05 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 500,000</p>
-          <p>Badung, Bali</p>
-        </div>
-      </div>
-    </div>
+    <% } %> <% } %>
   </div>
 </section>
 
 <section class="mb-16 px-32">
   <h1 class="my-16 text-center text-5xl font-medium">Cooking</h1>
-  <div class="flex justify-between gap-x-8 text-lg">
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/gudeg-workshop.png" />
+  <div class="grid grid-cols-3 gap-8 text-lg">
+    <% for(let workshop of workshops){ %> <% if(workshop.category ===
+    "Cooking"){ %>
+    <a
+      href="/workshops/<%= workshop._id %>"
+      class="overflow-hidden rounded-lg bg-[#697b51]"
+    >
+      <img
+        src="<%= workshop.images[0].url %>"
+        class="aspect-video w-full object-cover"
+      />
       <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Gudeg Workshop</p>
+        <p class="font-semibold"><%= workshop.title %></p>
         <p>Pick your date</p>
         <div class="mt-4 flex justify-between">
-          <p>Rp 200,000</p>
-          <p>City</p>
+          <p><%= workshop.price %></p>
+          <p><%= workshop.location %></p>
         </div>
       </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/nasi-kuning-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Nasi Kuning Workshop</p>
-        <p>03 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 200,000</p>
-          <p>City</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/ayam-sambal-matah-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Ayam Sambal Matah Workshop</p>
-        <p>03 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 200,000</p>
-          <p>Ubud, Bali</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-8 flex justify-between gap-x-8 text-lg">
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/pempek-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Pempek Workshop</p>
-        <p>04 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 200,000</p>
-          <p>City</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/rendang-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Rendang Workshop</p>
-        <p>06 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>City</p>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden rounded-lg bg-[#697b51]">
-      <img src="/images/papeda-workshop.png" />
-      <div class="px-3 py-2 text-white">
-        <p class="font-semibold">Papeda Workshop</p>
-        <p>08 May 2023</p>
-        <div class="mt-4 flex justify-between">
-          <p>Rp 300,000</p>
-          <p>City</p>
-        </div>
-      </div>
-    </div>
+    </a>
+    <% } %> <% } %>
   </div>
 </section>
-
-<section class="bg-[#f1f1f1] px-32 pb-16">
-  <h1 class="mb-16 pt-16 text-center text-5xl font-medium">Workshop Reviews</h1>
-  <div class="flex w-full flex-col items-center justify-center gap-y-8">
-    <div
-      class="flex w-[70%] items-center gap-x-4 rounded-xl bg-[#697b51] p-2 text-white"
-    >
-      <img src="/images/batik-review.png" alt="" srcset="" />
-      <div>
-        <p class="text-3xl font-semibold">Batik</p>
-        <div class="flex items-center gap-x-2 text-2xl">
-          <img src="/images/star.png" alt="" srcset="" />
-          <p>4.5 <span>(23 rating)</span></p>
-        </div>
-        <p class="font-thin">
-          “Workshop Batik di Jogja ini seru banget dan informatif, instruktur
-          yang ada juga seru, harganya termasuk murah dengan hasil dan bahan
-          bahan yang banyak.”
-        </p>
-      </div>
-    </div>
-    <div
-      class="flex w-[70%] items-center gap-x-4 rounded-xl bg-[#383b28] p-2 text-white"
-    >
-      <img src="/images/nasi-uduk-review.png" alt="" srcset="" />
-      <div>
-        <p class="text-3xl font-semibold">Nasi Uduk</p>
-        <div class="flex items-center gap-x-2 text-2xl">
-          <img src="/images/star.png" alt="" srcset="" />
-          <p>4.2 <span>(16 rating)</span></p>
-        </div>
-        <p class="font-thin">
-          “Tempat masak di Solo nyaman dan adem bgt serasa lagi healing, ibunya
-          juga baik dan sabar bgt bantuin kita masak nasi uduk khas Solo.”
-        </p>
-      </div>
-    </div>
-    <div
-      class="flex w-[70%] items-center gap-x-4 rounded-xl bg-[#697b51] p-2 text-white"
-    >
-      <img src="/images/pottery-workshop-review.png" alt="" srcset="" />
-      <div>
-        <p class="text-3xl font-semibold">Pottery Workshop</p>
-        <div class="flex items-center gap-x-2 text-2xl">
-          <img src="/images/star.png" alt="" srcset="" />
-          <p>4.7 <span>(26 rating)</span></p>
-        </div>
-        <p class="font-thin">
-          “Bener bener berasa lagi terapi, pemandangan hijau hutan yang bikin
-          adem sambil buat keramik yang seru banget, puas bgt ikut workshop
-          ini!”
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<%- include('../partials/footer') %>
