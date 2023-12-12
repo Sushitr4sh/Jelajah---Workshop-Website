@@ -50,7 +50,7 @@ const LocalStrategy = require("passport-local");
 const mongoSanitize = require("express-mongo-sanitize");
 const workshop = require("./models/workshop");
 
-const dbUrl = "mongodb://127.0.0.1:27017/jelajah";
+const dbUrl = process.env.DB_URL || "mongodb://127.0.0.1:27017/jelajah";
 
 main().catch((err) => console.log(err));
 async function main() {
